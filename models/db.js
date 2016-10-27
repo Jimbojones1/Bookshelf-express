@@ -1,10 +1,12 @@
 require('dotenv').config(); //# dot-env
 var db = require('knex')({	//# knex
-	client: process.env.CLIENT,
+	client: 'mysql',
 	connection: {
-		host: process.env.HOST,
-		user: process.env.USER,
-		password: process.env.PASSWORD,
-		database: process.env.DATABASE
+		host: 'localhost',
+		user: 'l33tdba',
+		password: 'w0rk5pac3',
+		database: 'cats_fansite'
 	}
 });
+
+module.exports = db;
